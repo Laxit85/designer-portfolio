@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
 import { MiniFooter } from "../components/Footer";
-import adClatTeam from "../assets/creatives/ad_1_clat_team.jpg";
-import productKogestFull from "../assets/creatives/product_1_kogest_side_table.jpg";
-import productVistaraFull from "../assets/creatives/product_2_vistara_sideboard.jpg";
-import outfitGoldSakshi from "../assets/creatives/outfit_2_sakshi_ethnic.jpg";
+const adClatTeam = "/sachin_work/10.jpg";
+const productKogestFull = "/sachin_work/39.jpg";
+const productVistaraFull = "/sachin_work/40.jpg";
+const outfitGoldSakshi = "/sachin_work/41.jpg";
 
 export default function CaseStudy() {
   return (

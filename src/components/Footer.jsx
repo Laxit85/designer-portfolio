@@ -24,7 +24,17 @@ export function MainFooter() {
         </div>
       </div>
       <div className="footer-bottom">
-        <p>© {new Date().getFullYear()} Sachin Graphic Designer. All rights reserved.</p>
+        <p>
+          © {new Date().getFullYear()} Sachin Graphic Designer. All rights reserved by{" "}
+          <a
+            href="https://morphnex.in"
+            target="_blank"
+            rel="noreferrer"
+            className="morphnex-link magnetic"
+          >
+            Morphnex (morphnex.in)
+          </a>
+        </p>
       </div>
     </footer>
   );
@@ -33,7 +43,17 @@ export function MainFooter() {
 export function MiniFooter({ linkTo = "/contact", linkText = "Start a Project" }) {
   return (
     <footer className="mini-footer">
-      <p>© {new Date().getFullYear()} Sachin Portfolio</p>
+      <p>
+        © {new Date().getFullYear()} Sachin Portfolio • All rights reserved by{" "}
+        <a
+          href="https://morphnex.in"
+          target="_blank"
+          rel="noreferrer"
+          className="morphnex-link"
+        >
+          Morphnex (morphnex.in)
+        </a>
+      </p>
       <Link to={linkTo} className="mini-footer-btn">{linkText} →</Link>
     </footer>
   );

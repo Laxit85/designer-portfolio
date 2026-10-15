@@ -7,7 +7,8 @@ import { designerInfo, categories, allCreatives } from "../data/creativesData";
 export default function Home() {
   // --- Category Filter State ---
   const [activeCategory, setActiveCategory] = useState("all");
-  const [selectedItemIndex, setSelectedItemIndex] = useState(null);
+  const [activeItem, setActiveItem] = useState(null);
+  const [activeList, setActiveList] = useState(allCreatives);
 
   // Filtered Creatives
   const filteredCreatives =
@@ -16,31 +17,32 @@ export default function Home() {
       : allCreatives.filter((item) => item.category === activeCategory);
 
   // Lightbox handlers
-  const handleOpenLightbox = (index) => {
-    setSelectedItemIndex(index);
+  const handleOpenLightbox = (item, list = filteredCreatives) => {
+    setActiveList(list);
+    setActiveItem(item);
   };
 
   const handleCloseLightbox = () => {
-    setSelectedItemIndex(null);
+    setActiveItem(null);
   };
 
   const handleNextLightbox = () => {
-    if (selectedItemIndex !== null) {
-      setSelectedItemIndex((prev) => (prev + 1) % filteredCreatives.length);
-    }
+    if (!activeItem || activeList.length === 0) return;
+    const currentIndex = activeList.findIndex((c) => c.id === activeItem.id);
+    const nextIndex = (currentIndex + 1) % activeList.length;
+    setActiveItem(activeList[nextIndex]);
   };
 
   const handlePrevLightbox = () => {
-    if (selectedItemIndex !== null) {
-      setSelectedItemIndex(
-        (prev) => (prev - 1 + filteredCreatives.length) % filteredCreatives.length
-      );
-    }
+    if (!activeItem || activeList.length === 0) return;
+    const currentIndex = activeList.findIndex((c) => c.id === activeItem.id);
+    const prevIndex = (currentIndex - 1 + activeList.length) % activeList.length;
+    setActiveItem(activeList[prevIndex]);
   };
 
   // --- Work Slider State ---
   const featuredSlides = allCreatives.filter((c) =>
-    ["ad-1", "product-1", "thumb-1", "social-1", "reel-3"].includes(c.id)
+    ["creative-9", "creative-10", "creative-12", "creative-39", "creative-61"].includes(c.id)
   );
 
   const [slideIndex, setSlideIndex] = useState(0);
@@ -199,7 +201,7 @@ export default function Home() {
               <article key={idx} className={`slide ${idx === slideIndex ? "active" : ""}`}>
                 <div
                   className="slide-img-wrapper"
-                  onClick={() => handleOpenLightbox(allCreatives.findIndex((c) => c.id === slide.id))}
+                  onClick={() => handleOpenLightbox(slide, featuredSlides)}
                 >
                   <img src={slide.image} alt={slide.title} className="slide-real-img" />
                   <div className="slide-hover-overlay">
@@ -218,7 +220,7 @@ export default function Home() {
                   <button
                     className="btn magnetic"
                     style={{ marginTop: "24px", width: "fit-content" }}
-                    onClick={() => handleOpenLightbox(allCreatives.findIndex((c) => c.id === slide.id))}
+                    onClick={() => handleOpenLightbox(slide, featuredSlides)}
                   >
                     View Project Details <span>→</span>
                   </button>
@@ -279,7 +281,7 @@ export default function Home() {
               className={`creative-card ${item.fullWidth ? "full-width-card" : ""} ${
                 item.category === "reel_covers" ? "reel-card" : ""
               }`}
-              onClick={() => handleOpenLightbox(index)}
+              onClick={() => handleOpenLightbox(item, filteredCreatives)}
             >
               <div className="creative-img-box">
                 <img src={item.image} alt={item.title} loading="lazy" />
@@ -323,52 +325,52 @@ export default function Home() {
         <div className="maroon-grid">
           <div
             className="maroon-card"
-            onClick={() => handleOpenLightbox(allCreatives.findIndex((c) => c.id === "product-1"))}
+            onClick={() => handleOpenLightbox(allCreatives.find((c) => c.id === "creative-39"), allCreatives)}
           >
             <div className="maroon-img-wrapper">
               <img
-                src={allCreatives.find((c) => c.id === "product-1")?.image}
-                alt="Kogest Side Table"
+                src={allCreatives.find((c) => c.id === "creative-39")?.image}
+                alt="Product Design Concept"
               />
             </div>
             <div className="maroon-info">
               <span className="maroon-tag">Furniture Design</span>
-              <h3>Kogest Side Table</h3>
-              <p>Minimalist side table with fluted conical pedestal & warm timber top.</p>
+              <h3>3D Product & Furniture Render #39</h3>
+              <p>Minimalist product model with custom materials & warm studio lighting.</p>
             </div>
           </div>
 
           <div
             className="maroon-card"
-            onClick={() => handleOpenLightbox(allCreatives.findIndex((c) => c.id === "product-2"))}
+            onClick={() => handleOpenLightbox(allCreatives.find((c) => c.id === "creative-40"), allCreatives)}
           >
             <div className="maroon-img-wrapper">
               <img
-                src={allCreatives.find((c) => c.id === "product-2")?.image}
-                alt="Vistara Sideboard"
+                src={allCreatives.find((c) => c.id === "creative-40")?.image}
+                alt="3D Furniture Render"
               />
             </div>
             <div className="maroon-info">
               <span className="maroon-tag">Cabinetry / CAD</span>
-              <h3>Vistara Sideboard</h3>
-              <p>Laser-carved mandala wooden sideboard with CAD technical drawings.</p>
+              <h3>3D Product & Furniture Render #40</h3>
+              <p>Precision 3D modeling and elevation renderings for custom woodwork.</p>
             </div>
           </div>
 
           <div
             className="maroon-card"
-            onClick={() => handleOpenLightbox(allCreatives.findIndex((c) => c.id === "product-3"))}
+            onClick={() => handleOpenLightbox(allCreatives.find((c) => c.id === "creative-41"), allCreatives)}
           >
             <div className="maroon-img-wrapper">
               <img
-                src={allCreatives.find((c) => c.id === "product-3")?.image}
-                alt="Sandbasted Settee"
+                src={allCreatives.find((c) => c.id === "creative-41")?.image}
+                alt="3D Product Design"
               />
             </div>
             <div className="maroon-info">
               <span className="maroon-tag">Heritage Furniture</span>
-              <h3>Sandbasted Settee</h3>
-              <p>Carved teak wood bench & chair set with orthographic wireframe projections.</p>
+              <h3>3D Product & Furniture Render #41</h3>
+              <p>Teak wood finish settee & furniture modeling with clean technical setup.</p>
             </div>
           </div>
         </div>
@@ -463,9 +465,9 @@ export default function Home() {
       </section>
 
       {/* Lightbox Modal */}
-      {selectedItemIndex !== null && (
+      {activeItem && (
         <LightboxModal
-          item={filteredCreatives[selectedItemIndex]}
+          item={activeItem}
           onClose={handleCloseLightbox}
           onNext={handleNextLightbox}
           onPrev={handlePrevLightbox}

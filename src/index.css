@@ -17,12 +17,15 @@ body {
   color: #050505;
   font-family: "Inter", sans-serif;
   overflow-x: hidden;
-  cursor: none;
+  cursor: default;
 }
 
 a,
-button {
-  cursor: none;
+button,
+[role="button"],
+input[type="submit"],
+.magnetic {
+  cursor: pointer;
 }
 
 ::selection {
@@ -56,35 +59,47 @@ button {
   background: var(--red);
   border-radius: 50%;
   pointer-events: none;
-  z-index: 99999;
+  z-index: 2147483647;
   transform: translate(-50%, -50%);
-  transition: width 0.25s ease, height 0.25s ease, background 0.25s ease;
-  mix-blend-mode: difference;
+  transition: width 0.22s ease, height 0.22s ease, background 0.22s ease, opacity 0.2s ease;
+  mix-blend-mode: normal;
+  box-shadow: 0 0 12px rgba(255, 26, 26, 0.85);
+  opacity: 0;
 }
 
 .cursor-follower {
   position: fixed;
-  width: 46px;
-  height: 46px;
-  border: 1px solid var(--red);
+  width: 44px;
+  height: 44px;
+  border: 1.5px solid var(--red);
   border-radius: 50%;
   pointer-events: none;
-  z-index: 99998;
+  z-index: 2147483646;
   transform: translate(-50%, -50%);
-  transition: width 0.3s ease, height 0.3s ease, border 0.3s ease;
+  transition: width 0.28s ease, height 0.28s ease, border-color 0.28s ease, opacity 0.2s ease;
+  background: rgba(255, 26, 26, 0.06);
+  opacity: 0;
 }
 
 .cursor.active {
-  width: 70px;
-  height: 70px;
+  width: 26px;
+  height: 26px;
   background: var(--red);
-  opacity: 0.75;
+  box-shadow: 0 0 18px rgba(255, 26, 26, 0.95);
 }
 
 .cursor-follower.active {
-  width: 90px;
-  height: 90px;
-  border-color: var(--black);
+  width: 66px;
+  height: 66px;
+  border-color: var(--red);
+  background: rgba(255, 26, 26, 0.14);
+}
+
+@media (pointer: coarse) {
+  .cursor,
+  .cursor-follower {
+    display: none !important;
+  }
 }
 
 /* ================================
@@ -1942,13 +1957,15 @@ button {
   overflow: hidden;
   background: #f5f0eb;
   border-bottom: 4px solid var(--black);
+  aspect-ratio: 4 / 5;
 }
 
 .avatar-img {
   width: 100%;
-  height: auto;
+  height: 100%;
   display: block;
   object-fit: cover;
+  object-position: center 15%;
   transition: transform 0.6s ease;
 }
 
@@ -2330,137 +2347,248 @@ button {
 .lightbox-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.88);
-  backdrop-filter: blur(14px);
+  background: rgba(5, 5, 5, 0.94);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
   z-index: 100000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  animation: fadeIn 0.25s ease-out;
+  cursor: default;
+}
+
+.lightbox-topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1100px;
+  margin-bottom: 14px;
+  gap: 16px;
+  z-index: 100002;
+}
+
+.lightbox-badge-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.lightbox-top-pill {
+  display: inline-block;
+  background: var(--red);
+  color: var(--white);
+  padding: 5px 14px;
+  border-radius: 999px;
+  font-weight: 800;
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  flex-shrink: 0;
+}
+
+.lightbox-top-name {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 0.9rem;
+  font-weight: 600;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.lightbox-close-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--red);
+  color: var(--white);
+  border: 0;
+  padding: 8px 18px;
+  border-radius: 999px;
+  font-weight: 900;
+  font-size: 0.82rem;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+  box-shadow: 0 4px 20px rgba(255, 26, 26, 0.4);
+  transition: transform 0.2s ease, background 0.2s ease;
+  flex-shrink: 0;
+}
+
+.lightbox-close-btn:hover {
+  background: var(--dark-red);
+  transform: scale(1.05);
+}
+
+.lightbox-close-btn .close-icon {
+  font-size: 1.05rem;
+  line-height: 1;
+}
+
+.lightbox-nav-btn {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 52px;
+  height: 52px;
+  background: rgba(255, 255, 255, 0.96);
+  color: var(--black);
+  border: 3px solid var(--black);
+  border-radius: 50%;
+  font-size: 2.2rem;
+  line-height: 1;
   display: grid;
   place-items: center;
-  padding: 4vw;
-  animation: fadeIn 0.3s ease;
+  cursor: pointer;
+  z-index: 100003;
+  transition: all 0.2s ease;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.45);
+}
+
+.lightbox-nav-btn:hover {
+  background: var(--red);
+  color: var(--white);
+  border-color: var(--red);
+  transform: translateY(-50%) scale(1.12);
+}
+
+.lightbox-nav-btn.prev {
+  left: 24px;
+}
+
+.lightbox-nav-btn.next {
+  right: 24px;
 }
 
 .lightbox-content {
   position: relative;
   background: var(--white);
   border: 4px solid var(--black);
-  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6);
+  border-radius: 8px;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.7);
   max-width: 1100px;
   width: 100%;
-  max-height: 90vh;
+  max-height: calc(88vh - 50px);
   overflow-y: auto;
+  overflow-x: hidden;
+  cursor: default;
 }
 
-.lightbox-close {
-  position: absolute;
-  top: 16px;
-  right: 16px;
-  width: 44px;
-  height: 44px;
-  background: var(--black);
-  color: var(--white);
-  border: 0;
-  border-radius: 50%;
-  font-size: 1.2rem;
-  font-weight: 900;
-  z-index: 10;
-  transition: background 0.3s ease;
+.lightbox-content::-webkit-scrollbar {
+  width: 8px;
 }
 
-.lightbox-close:hover {
+.lightbox-content::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.lightbox-content::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 4px;
+}
+
+.lightbox-content::-webkit-scrollbar-thumb:hover {
   background: var(--red);
-}
-
-.lightbox-nav {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 50px;
-  height: 50px;
-  background: var(--black);
-  color: var(--white);
-  border: 0;
-  border-radius: 50%;
-  font-size: 2rem;
-  line-height: 1;
-  z-index: 10;
-  display: grid;
-  place-items: center;
-}
-
-.lightbox-nav:hover {
-  background: var(--red);
-}
-
-.lightbox-nav.prev {
-  left: -25px;
-}
-
-.lightbox-nav.next {
-  right: -25px;
 }
 
 .lightbox-grid {
   display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
+  grid-template-columns: minmax(0, 1.25fr) minmax(0, 0.95fr);
   align-items: stretch;
+  min-width: 0;
 }
 
 .lightbox-image-wrapper {
-  background: #f0f0f0;
-  padding: 24px;
+  background: #0f0f11;
+  padding: 32px 24px;
   display: flex;
   align-items: center;
   justify-content: center;
   border-right: 4px solid var(--black);
+  min-width: 0;
 }
 
 .lightbox-image {
   max-width: 100%;
-  max-height: 70vh;
+  max-height: 64vh;
   object-fit: contain;
-  border: 2px solid var(--black);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
 }
 
 .lightbox-details {
-  padding: 40px;
+  padding: 36px 32px;
   display: flex;
   flex-direction: column;
+  min-width: 0;
+  background: #ffffff;
+}
+
+.lightbox-details-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
 }
 
 .lightbox-badge {
   display: inline-block;
   background: var(--red);
   color: var(--white);
-  padding: 6px 14px;
+  padding: 5px 14px;
   border-radius: 999px;
   font-weight: 900;
   font-size: 0.75rem;
   text-transform: uppercase;
   width: fit-content;
-  margin-bottom: 16px;
+}
+
+.lightbox-close-corner {
+  width: 36px;
+  height: 36px;
+  background: var(--black);
+  color: var(--white);
+  border: 0;
+  border-radius: 50%;
+  font-size: 1rem;
+  font-weight: 900;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.lightbox-close-corner:hover {
+  background: var(--red);
+  transform: scale(1.1);
 }
 
 .lightbox-details h2 {
   font-family: var(--anton);
-  font-size: clamp(2rem, 4vw, 3.5rem);
-  line-height: 1;
+  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+  line-height: 1.05;
   text-transform: uppercase;
   margin-bottom: 14px;
+  letter-spacing: 0.02em;
 }
 
 .lightbox-client {
   font-size: 0.95rem;
   color: var(--black);
-  margin-bottom: 18px;
+  margin-bottom: 16px;
 }
 
 .lightbox-desc {
-  font-size: 1rem;
-  line-height: 1.7;
+  font-size: 0.95rem;
+  line-height: 1.65;
   color: rgba(5, 5, 5, 0.75);
-  font-weight: 600;
-  margin-bottom: 24px;
+  font-weight: 500;
+  margin-bottom: 22px;
 }
 
 .lightbox-tags {
@@ -2473,36 +2601,67 @@ button {
 .tag-pill {
   background: var(--gray);
   border: 1px solid var(--border);
-  padding: 6px 12px;
+  padding: 5px 12px;
   border-radius: 999px;
   font-size: 0.75rem;
-  font-weight: 800;
+  font-weight: 700;
+  color: #333;
 }
 
 .lightbox-gallery-preview {
   margin-top: auto;
   border-top: 2px solid var(--border);
-  padding-top: 20px;
+  padding-top: 18px;
+  margin-bottom: 18px;
 }
 
 .lightbox-gallery-preview h4 {
   font-size: 0.8rem;
   font-weight: 900;
   text-transform: uppercase;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 
 .gallery-thumbs {
   display: flex;
-  gap: 12px;
+  gap: 10px;
 }
 
 .gallery-thumbs img {
-  width: 80px;
-  height: 60px;
+  width: 76px;
+  height: 56px;
   object-fit: cover;
   border: 2px solid var(--black);
-  border-radius: 6px;
+  border-radius: 4px;
+}
+
+.lightbox-footer-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid var(--border);
+  padding-top: 16px;
+  margin-top: auto;
+  gap: 12px;
+}
+
+.lightbox-download-link {
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: var(--black);
+  text-decoration: underline;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.lightbox-download-link:hover {
+  color: var(--red);
+}
+
+.lightbox-esc-hint {
+  font-size: 0.78rem;
+  color: #777;
+  font-weight: 600;
 }
 
 /* Controls & Search Bar on /work */
@@ -2715,6 +2874,7 @@ button {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center 15%;
   border-radius: 12px;
 }
 
@@ -2745,7 +2905,7 @@ button {
 }
 
 /* Media Queries for Custom Elements */
-@media (max-width: 1100px) {
+@media (max-width: 1024px) {
   .maroon-grid {
     grid-template-columns: 1fr;
   }
@@ -2757,10 +2917,25 @@ button {
   .lightbox-image-wrapper {
     border-right: 0;
     border-bottom: 4px solid var(--black);
+    padding: 20px;
   }
 
   .case-grid {
     grid-template-columns: 1fr;
+  }
+
+  .lightbox-nav-btn {
+    width: 44px;
+    height: 44px;
+    font-size: 1.8rem;
+  }
+
+  .lightbox-nav-btn.prev {
+    left: 8px;
+  }
+
+  .lightbox-nav-btn.next {
+    right: 8px;
   }
 }
 
@@ -2770,12 +2945,49 @@ button {
     grid-template-columns: 1fr;
   }
 
-  .lightbox-nav {
+  .lightbox-nav-btn {
     display: none;
+  }
+
+  .lightbox-overlay {
+    padding: 12px;
+  }
+
+  .lightbox-topbar {
+    margin-bottom: 8px;
+  }
+
+  .lightbox-details {
+    padding: 24px 18px;
   }
 
   .search-box {
     width: 100%;
   }
 }
+
+/* Morphnex Footer Link */
+.morphnex-link {
+  color: #ffffff !important;
+  font-weight: 900 !important;
+  text-decoration: underline !important;
+  text-underline-offset: 3px;
+  transition: opacity 0.2s ease, color 0.2s ease;
+  display: inline-block;
+}
+
+.morphnex-link:hover {
+  opacity: 0.9;
+  color: #ffcccc !important;
+}
+
+.mini-footer .morphnex-link {
+  color: var(--red) !important;
+  text-decoration: underline !important;
+}
+
+.mini-footer .morphnex-link:hover {
+  color: var(--black) !important;
+}
+
 

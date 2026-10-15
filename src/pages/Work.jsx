@@ -6,7 +6,7 @@ import { categories, allCreatives } from "../data/creativesData";
 export default function Work() {
   const [selectedCategory, setSelectedCategory] = useState("all");
   const [searchQuery, setSearchQuery] = useState("");
-  const [selectedItemIndex, setSelectedItemIndex] = useState(null);
+  const [activeItem, setActiveItem] = useState(null);
 
   // Filter items based on category and search query
   const filteredItems = allCreatives.filter((item) => {
@@ -20,26 +20,26 @@ export default function Work() {
     return matchesCategory && matchesSearch;
   });
 
-  const handleOpenLightbox = (index) => {
-    setSelectedItemIndex(index);
+  const handleOpenLightbox = (item) => {
+    setActiveItem(item);
   };
 
   const handleCloseLightbox = () => {
-    setSelectedItemIndex(null);
+    setActiveItem(null);
   };
 
   const handleNextLightbox = () => {
-    if (selectedItemIndex !== null) {
-      setSelectedItemIndex((prev) => (prev + 1) % filteredItems.length);
-    }
+    if (!activeItem || filteredItems.length === 0) return;
+    const currentIndex = filteredItems.findIndex((c) => c.id === activeItem.id);
+    const nextIndex = (currentIndex + 1) % filteredItems.length;
+    setActiveItem(filteredItems[nextIndex]);
   };
 
   const handlePrevLightbox = () => {
-    if (selectedItemIndex !== null) {
-      setSelectedItemIndex(
-        (prev) => (prev - 1 + filteredItems.length) % filteredItems.length
-      );
-    }
+    if (!activeItem || filteredItems.length === 0) return;
+    const currentIndex = filteredItems.findIndex((c) => c.id === activeItem.id);
+    const prevIndex = (currentIndex - 1 + filteredItems.length) % filteredItems.length;
+    setActiveItem(filteredItems[prevIndex]);
   };
 
   return (
@@ -98,7 +98,7 @@ export default function Work() {
               className={`gallery-work-card ${item.fullWidth ? "span-full" : ""} ${
                 item.category === "reel_covers" ? "reel-aspect" : ""
               }`}
-              onClick={() => handleOpenLightbox(index)}
+              onClick={() => handleOpenLightbox(item)}
             >
               <div className="card-media-wrapper">
                 <img src={item.image} alt={item.title} loading="lazy" />
@@ -123,9 +123,9 @@ export default function Work() {
       <MiniFooter linkTo="/contact" linkText="Start a Project with Sachin" />
 
       {/* Lightbox Modal */}
-      {selectedItemIndex !== null && (
+      {activeItem && (
         <LightboxModal
-          item={filteredItems[selectedItemIndex]}
+          item={activeItem}
           onClose={handleCloseLightbox}
           onNext={handleNextLightbox}
           onPrev={handlePrevLightbox}

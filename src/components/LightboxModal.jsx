@@ -7,48 +7,108 @@ export default function LightboxModal({ item, onClose, onNext, onPrev }) {
       if (e.key === "ArrowRight" && onNext) onNext();
       if (e.key === "ArrowLeft" && onPrev) onPrev();
     };
+
     window.addEventListener("keydown", handleKeyDown);
+    const originalOverflow = document.body.style.overflow;
     document.body.style.overflow = "hidden";
+
     return () => {
       window.removeEventListener("keydown", handleKeyDown);
-      document.body.style.overflow = "unset";
+      document.body.style.overflow = originalOverflow;
     };
   }, [onClose, onNext, onPrev]);
 
   if (!item) return null;
 
+  const handleOverlayClick = (e) => {
+    if (e.target === e.currentTarget) {
+      onClose();
+    }
+  };
+
   return (
-    <div className="lightbox-overlay" onClick={onClose}>
-      <div className="lightbox-content" onClick={(e) => e.stopPropagation()}>
-        <button className="lightbox-close" onClick={onClose} aria-label="Close">
-          ✕
+    <div
+      className="lightbox-overlay"
+      onClick={handleOverlayClick}
+      role="dialog"
+      aria-modal="true"
+      aria-label={item.title}
+    >
+      {/* Top Header Bar */}
+      <div className="lightbox-topbar">
+        <div className="lightbox-badge-title">
+          <span className="lightbox-top-pill">{item.categoryLabel}</span>
+          <span className="lightbox-top-name">{item.title}</span>
+        </div>
+
+        <button
+          className="lightbox-close-btn magnetic"
+          onClick={onClose}
+          aria-label="Close modal"
+          title="Close (Press Escape)"
+        >
+          <span className="close-text">CLOSE</span>
+          <span className="close-icon">✕</span>
         </button>
+      </div>
 
-        {onPrev && (
-          <button className="lightbox-nav prev" onClick={onPrev} aria-label="Previous">
-            ‹
-          </button>
-        )}
+      {/* Screen Side Nav Arrows (Fixed on Overlay, never causing horizontal scroll) */}
+      {onPrev && (
+        <button
+          className="lightbox-nav-btn prev magnetic"
+          onClick={(e) => {
+            e.stopPropagation();
+            onPrev();
+          }}
+          aria-label="Previous item"
+          title="Previous (Left Arrow)"
+        >
+          ‹
+        </button>
+      )}
 
-        {onNext && (
-          <button className="lightbox-nav next" onClick={onNext} aria-label="Next">
-            ›
-          </button>
-        )}
+      {onNext && (
+        <button
+          className="lightbox-nav-btn next magnetic"
+          onClick={(e) => {
+            e.stopPropagation();
+            onNext();
+          }}
+          aria-label="Next item"
+          title="Next (Right Arrow)"
+        >
+          ›
+        </button>
+      )}
 
+      {/* Main Modal Card */}
+      <div className="lightbox-content" onClick={(e) => e.stopPropagation()}>
         <div className="lightbox-grid">
           <div className="lightbox-image-wrapper">
             <img src={item.image} alt={item.title} className="lightbox-image" />
           </div>
 
           <div className="lightbox-details">
-            <span className="lightbox-badge">{item.categoryLabel}</span>
+            <div className="lightbox-details-header">
+              <span className="lightbox-badge">{item.categoryLabel}</span>
+              <button
+                className="lightbox-close-corner magnetic"
+                onClick={onClose}
+                aria-label="Close"
+                title="Close (Esc)"
+              >
+                ✕
+              </button>
+            </div>
+
             <h2>{item.title}</h2>
+
             {item.client && (
               <p className="lightbox-client">
                 <strong>Client / Brand:</strong> {item.client}
               </p>
             )}
+
             <p className="lightbox-desc">{item.desc}</p>
 
             {item.tags && item.tags.length > 0 && (
@@ -71,6 +131,18 @@ export default function LightboxModal({ item, onClose, onNext, onPrev }) {
                 </div>
               </div>
             )}
+
+            <div className="lightbox-footer-actions">
+              <a
+                href={item.image}
+                target="_blank"
+                rel="noreferrer"
+                className="lightbox-download-link magnetic"
+              >
+                Open Original Image ↗
+              </a>
+              <span className="lightbox-esc-hint">Press [ESC] or click outside to close</span>
+            </div>
           </div>
         </div>
       </div>

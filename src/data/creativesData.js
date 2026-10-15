@@ -1,58 +1,12 @@
-// Extracted Portfolio Data for Sachin (Graphic Designer)
-import sachinAvatar from "../assets/creatives/sachin_avatar.jpg";
-import sachinHeroFull from "../assets/creatives/sachin_hero_full.jpg";
-
-// Ad Creatives
-import adClatTeam from "../assets/creatives/ad_1_clat_team.jpg";
-import adIpmatGem from "../assets/creatives/ad_2_ipmat_hidden_gem.jpg";
-import adIpmatDemo from "../assets/creatives/ad_3_ipmat_demo_class.jpg";
-import adClatGamePlan from "../assets/creatives/ad_4_clat_game_plan.jpg";
-
-// Social Media Posts
-import socialAdvocateDay from "../assets/creatives/social_1_advocate_day.jpg";
-import socialParliamentUpdate from "../assets/creatives/social_2_parliament_update.jpg";
-import socialBootcampRegister from "../assets/creatives/social_3_bootcamp_register.jpg";
-import socialRakshaBandhan from "../assets/creatives/social_4_raksha_bandhan.jpg";
-import socialConfusedCap from "../assets/creatives/social_5_confused_cap.jpg";
-
-// Product Designs - Furniture
-import productKogestFull from "../assets/creatives/product_1_kogest_side_table.jpg";
-import kogest1 from "../assets/creatives/furniture_kogest_render1.jpg";
-import kogest2 from "../assets/creatives/furniture_kogest_render2.jpg";
-import kogest3 from "../assets/creatives/furniture_kogest_render3.jpg";
-
-import productVistaraFull from "../assets/creatives/product_2_vistara_sideboard.jpg";
-import vistaraRender from "../assets/creatives/furniture_vistara_render.jpg";
-import vistaraDrawing from "../assets/creatives/furniture_vistara_drawing.jpg";
-
-import productSandbastedFull from "../assets/creatives/product_3_sandbasted_furniture.jpg";
-import sandbastedRender from "../assets/creatives/furniture_sandbasted_render.jpg";
-import sandbastedDrawing from "../assets/creatives/furniture_sandbasted_drawing.jpg";
-
-// Product Designs - Outfits
-import outfitWhiteKurta from "../assets/creatives/outfit_1_white_kurta.jpg";
-import outfitGoldSakshi from "../assets/creatives/outfit_2_sakshi_ethnic.jpg";
-
-// Thumbnails
-import thumbVoteChori from "../assets/creatives/thumb_1_vote_chori.jpg";
-import thumbVerbalMastery from "../assets/creatives/thumb_2_verbal_mastery.jpg";
-import thumbAir22 from "../assets/creatives/thumb_3_air_22.jpg";
-import thumbLrdiMistakes from "../assets/creatives/thumb_4_lrdi_mistakes.jpg";
-
-// Reels & Shorts
-import reelUnknownBeautiful from "../assets/creatives/reel_1_unknown_beautiful.jpg";
-import reelClat5Topics from "../assets/creatives/reel_2_clat_5_topics.jpg";
-import reelRajShamani from "../assets/creatives/reel_3_raj_shamani.jpg";
-import reelAnswerKeyOut from "../assets/creatives/reel_4_answer_key_out.jpg";
-
+// Sachin Portfolio Data - Powered by Sachin Work Real Assets
 export const designerInfo = {
   name: "Sachin",
   hindiName: "सचिन",
   title: "Graphic Designer & Visual Artist",
   tagline: "Bold Visuals For Brands That Refuse To Blend In",
   bio: "I specialize in high-impact Ad Creatives, Social Media Campaigns, Product & Furniture Modeling, High-CTR YouTube Thumbnails, and Reel Cover Visuals.",
-  avatar: sachinAvatar,
-  heroFull: sachinHeroFull,
+  avatar: "/sachin_avatar.jpg?v=2",
+  heroFull: "/sachin_hero_full.jpg?v=2",
   stats: {
     projects: "120+",
     clients: "45+",
@@ -65,270 +19,1465 @@ export const categories = [
   { id: "all", label: "All Creatives" },
   { id: "ad_creatives", label: "Ad Creatives" },
   { id: "social_posts", label: "Social Media Posts" },
-  { id: "product_designs", label: "Product Designs" },
+  { id: "product_designs", label: "Product & Furniture" },
   { id: "thumbnails", label: "Thumbnail Designs" },
   { id: "reel_covers", label: "Reel Covers & Shorts" },
 ];
 
 export const allCreatives = [
-  // --- AD CREATIVES ---
   {
-    id: "ad-1",
-    category: "ad_creatives",
-    categoryLabel: "Ad Creative",
-    title: "Best CLAT Team In The Town",
-    client: "Law Prep Tutorial",
-    image: adClatTeam,
-    aspectRatio: "1/1",
-    tags: ["Paid Ads", "Ad Design", "EdTech", "Social Campaign"],
-    desc: "High-converting promotional ad graphic designed for Law Prep Tutorial announcing new CLAT 2027 batch with expert faculty showcase and high-impact red branding.",
+    "id": "creative-9",
+    "file": "9.jpg",
+    "num": 9,
+    "category": "reel_covers",
+    "categoryLabel": "Reel Cover",
+    "title": "Reel Cover & Shorts #9",
+    "client": "Law Prep Tutorial",
+    "image": "/sachin_work/9.jpg",
+    "aspectRatio": "9/16",
+    "fullWidth": false,
+    "tags": [
+      "Instagram Reel",
+      "Vertical 9:16",
+      "High CTR",
+      "Shorts"
+    ],
+    "desc": "9:16 vertical cover artwork engineered for high engagement on Instagram Reels & YouTube Shorts."
   },
   {
-    id: "ad-2",
-    category: "ad_creatives",
-    categoryLabel: "Ad Creative",
-    title: "IPMAT - Hidden Gem!",
-    client: "Law Prep Tutorial / LPT",
-    image: adIpmatGem,
-    aspectRatio: "1/1",
-    tags: ["Informational Ad", "IPMAT", "Visual Hierarchy"],
-    desc: "Educational ad graphic highlighting IPMAT as an underexplored path after 12th grade with structured blueprint, key stats, and strong CTA.",
+    "id": "creative-10",
+    "file": "10.jpg",
+    "num": 10,
+    "category": "ad_creatives",
+    "categoryLabel": "Ad Creative",
+    "title": "Birla Group — Admissions Open",
+    "client": "Birla Group of Institutions",
+    "image": "/sachin_work/10.jpg",
+    "aspectRatio": "1/1",
+    "fullWidth": false,
+    "tags": [
+      "Ad Creative",
+      "Admissions",
+      "Birla Group",
+      "Education"
+    ],
+    "desc": "High-impact admission promotional ad banner highlighting academic streams (Science, Commerce & Humanities) with clear phone CTA and modern school branding."
   },
   {
-    id: "ad-3",
-    category: "ad_creatives",
-    categoryLabel: "Ad Creative",
-    title: "Free IPMAT 2027 Demo Class",
-    client: "Law Prep Tutorial",
-    image: adIpmatDemo,
-    aspectRatio: "1/1",
-    tags: ["Demo Class Promo", "Lead Generation", "Banner Art"],
-    desc: "Vibrant purple and gold promotional creative designed to drive registrations for free IPMAT 2027 demo classes with trophy graphics.",
+    "id": "creative-11",
+    "file": "11.jpg",
+    "num": 11,
+    "category": "ad_creatives",
+    "categoryLabel": "Ad Creative",
+    "title": "High-Conversion Campaign Ad #11",
+    "client": "Law Prep Tutorial (LPT)",
+    "image": "/sachin_work/11.jpg",
+    "aspectRatio": "4/5",
+    "fullWidth": false,
+    "tags": [
+      "Paid Ads",
+      "Ad Campaign",
+      "EdTech",
+      "Conversion Art"
+    ],
+    "desc": "Promotional ad graphic optimized for paid media campaigns with high-contrast typography and clear CTA."
   },
   {
-    id: "ad-4",
-    category: "ad_creatives",
-    categoryLabel: "Ad Creative",
-    title: "CLAT 2027 Game Plan",
-    client: "Law Prep Tutorial",
-    image: adClatGamePlan,
-    aspectRatio: "1/1",
-    tags: ["Webinar Ad", "Roadmap Graphic", "Convertive Design"],
-    desc: "High-contrast webinar promotional creative detailing the 'School to NLU' roadmap with webinar timing, Q&A indicators, and join trigger.",
-  },
-
-  // --- SOCIAL MEDIA POSTS ---
-  {
-    id: "social-1",
-    category: "social_posts",
-    categoryLabel: "Social Media Post",
-    title: "Happy Advocate Day",
-    client: "Law Prep Tutorial",
-    image: socialAdvocateDay,
-    aspectRatio: "1/1",
-    tags: ["Special Day Post", "Typography", "Editorial Layout"],
-    desc: "Commemorative editorial post honoring legal legends on Advocate Day with warm monochrome tones, elegant serif typography, and gold quotes.",
+    "id": "creative-12",
+    "file": "12.jpg",
+    "num": 12,
+    "category": "social_posts",
+    "categoryLabel": "Infographic Banner",
+    "title": "Wide Campaign Banner #12",
+    "client": "Law Prep Tutorial",
+    "image": "/sachin_work/12.jpg",
+    "aspectRatio": "16/7",
+    "fullWidth": true,
+    "tags": [
+      "Infographic",
+      "Wide Banner",
+      "Process Map",
+      "Editorial"
+    ],
+    "desc": "Panoramic banner layout explaining multi-step processes, announcements, and visual breakdowns."
   },
   {
-    id: "social-2",
-    category: "social_posts",
-    categoryLabel: "Social Media Post",
-    title: "Big Update From Parliament",
-    client: "Law Prep Authority",
-    image: socialParliamentUpdate,
-    aspectRatio: "1/1",
-    tags: ["News Graphic", "Current Affairs", "High Impact"],
-    desc: "Breaking legal news graphic overlay on parliamentary updates featuring high-contrast typography, Modi portrait, and news broadcast aesthetics.",
+    "id": "creative-13",
+    "file": "13.jpg",
+    "num": 13,
+    "category": "social_posts",
+    "categoryLabel": "Infographic Banner",
+    "title": "Wide Campaign Banner #13",
+    "client": "Law Prep Tutorial",
+    "image": "/sachin_work/13.jpg",
+    "aspectRatio": "16/7",
+    "fullWidth": true,
+    "tags": [
+      "Infographic",
+      "Wide Banner",
+      "Process Map",
+      "Editorial"
+    ],
+    "desc": "Panoramic banner layout explaining multi-step processes, announcements, and visual breakdowns."
   },
   {
-    id: "social-3",
-    category: "social_posts",
-    categoryLabel: "Social Media Post",
-    title: "BootCamp Registration - 04 Oct",
-    client: "Law Prep Tutorial",
-    image: socialBootcampRegister,
-    aspectRatio: "1/1",
-    tags: ["Urgency Post", "Event Promo", "3D Typography"],
-    desc: "Urgency-driven registration deadline post featuring vibrant 3D calendar badge '04 OCT', student cutouts, and high energy red accents.",
+    "id": "creative-14",
+    "file": "14.jpg",
+    "num": 14,
+    "category": "social_posts",
+    "categoryLabel": "Infographic Banner",
+    "title": "Wide Campaign Banner #14",
+    "client": "Law Prep Tutorial",
+    "image": "/sachin_work/14.jpg",
+    "aspectRatio": "16/7",
+    "fullWidth": true,
+    "tags": [
+      "Infographic",
+      "Wide Banner",
+      "Process Map",
+      "Editorial"
+    ],
+    "desc": "Panoramic banner layout explaining multi-step processes, announcements, and visual breakdowns."
   },
   {
-    id: "social-4",
-    category: "social_posts",
-    categoryLabel: "Social Media Post",
-    title: "Happy Raksha Bandhan",
-    client: "LPT",
-    image: socialRakshaBandhan,
-    aspectRatio: "1/1",
-    tags: ["Festival Greetings", "Custom Illustration", "Warm Colors"],
-    desc: "Festive greeting creative celebrating Raksha Bandhan with warm brother-sister illustration and customized brand messaging.",
+    "id": "creative-15",
+    "file": "15.jpg",
+    "num": 15,
+    "category": "ad_creatives",
+    "categoryLabel": "Ad Creative",
+    "title": "High-Conversion Campaign Ad #15",
+    "client": "Law Prep Tutorial (LPT)",
+    "image": "/sachin_work/15.jpg",
+    "aspectRatio": "1/1",
+    "fullWidth": false,
+    "tags": [
+      "Paid Ads",
+      "Ad Campaign",
+      "EdTech",
+      "Conversion Art"
+    ],
+    "desc": "Promotional ad graphic optimized for paid media campaigns with high-contrast typography and clear CTA."
   },
   {
-    id: "social-5",
-    category: "social_posts",
-    categoryLabel: "Social Media Post",
-    title: "Confused About CAP?",
-    client: "Law Prep Tutorial",
-    image: socialConfusedCap,
-    aspectRatio: "16/5",
-    fullWidth: true,
-    tags: ["Infographic Banner", "Process Breakdown", "Data Visualization"],
-    desc: "Comprehensive 5-part process infographic breakdown explaining Common Admission Process (CAP 1, CAP 2, CAP 3) step-by-step.",
-  },
-
-  // --- PRODUCT DESIGNS ---
-  {
-    id: "product-1",
-    category: "product_designs",
-    categoryLabel: "Product Design",
-    title: "Kogest Side Table",
-    subCategory: "Furniture Design",
-    client: "Bhavya Living / Kogest",
-    image: productKogestFull,
-    gallery: [kogest1, kogest2, kogest3],
-    aspectRatio: "16/9",
-    tags: ["Industrial Design", "Furniture Renders", "3D Modeling"],
-    desc: "Modern minimalist side table featuring a warm wooden top disk resting on a conical fluted white base. Rendered across studio setting and living room interior context.",
+    "id": "creative-16",
+    "file": "16.jpg",
+    "num": 16,
+    "category": "ad_creatives",
+    "categoryLabel": "Ad Creative",
+    "title": "High-Conversion Campaign Ad #16",
+    "client": "Law Prep Tutorial (LPT)",
+    "image": "/sachin_work/16.jpg",
+    "aspectRatio": "1/1",
+    "fullWidth": false,
+    "tags": [
+      "Paid Ads",
+      "Ad Campaign",
+      "EdTech",
+      "Conversion Art"
+    ],
+    "desc": "Promotional ad graphic optimized for paid media campaigns with high-contrast typography and clear CTA."
   },
   {
-    id: "product-2",
-    category: "product_designs",
-    categoryLabel: "Product Design",
-    title: "Vistara Laser-Carved Sideboard",
-    subCategory: "Furniture Design",
-    client: "Bhavya Living",
-    image: productVistaraFull,
-    gallery: [vistaraRender, vistaraDrawing],
-    aspectRatio: "16/9",
-    tags: ["Cabinetry", "Laser Cut Patterns", "CAD Technical Blueprint"],
-    desc: "Luxury wooden sideboard boasting intricate circular laser-carved mandala doors paired with full orthographic CAD elevation & plan drawings.",
+    "id": "creative-17",
+    "file": "17.jpg",
+    "num": 17,
+    "category": "ad_creatives",
+    "categoryLabel": "Ad Creative",
+    "title": "High-Conversion Campaign Ad #17",
+    "client": "Law Prep Tutorial (LPT)",
+    "image": "/sachin_work/17.jpg",
+    "aspectRatio": "1/1",
+    "fullWidth": false,
+    "tags": [
+      "Paid Ads",
+      "Ad Campaign",
+      "EdTech",
+      "Conversion Art"
+    ],
+    "desc": "Promotional ad graphic optimized for paid media campaigns with high-contrast typography and clear CTA."
   },
   {
-    id: "product-3",
-    category: "product_designs",
-    categoryLabel: "Product Design",
-    title: "Sandbasted Heritage Settee & Chair",
-    subCategory: "Furniture Design",
-    client: "Bhavya Living",
-    image: productSandbastedFull,
-    gallery: [sandbastedRender, sandbastedDrawing],
-    aspectRatio: "16/9",
-    tags: ["Traditional Craftsmanship", "Heritage Woodwork", "Technical Drawing"],
-    desc: "Heritage Indian carved wood settee and matching accent chair set accompanied by full technical wireframe schematics and real wood material renders.",
+    "id": "creative-18",
+    "file": "18.jpg",
+    "num": 18,
+    "category": "ad_creatives",
+    "categoryLabel": "Ad Creative",
+    "title": "High-Conversion Campaign Ad #18",
+    "client": "Law Prep Tutorial (LPT)",
+    "image": "/sachin_work/18.jpg",
+    "aspectRatio": "4/5",
+    "fullWidth": false,
+    "tags": [
+      "Paid Ads",
+      "Ad Campaign",
+      "EdTech",
+      "Conversion Art"
+    ],
+    "desc": "Promotional ad graphic optimized for paid media campaigns with high-contrast typography and clear CTA."
   },
   {
-    id: "product-4",
-    category: "product_designs",
-    categoryLabel: "Product Design",
-    title: "Ethnic White Embroidered Kurta",
-    subCategory: "Outfit Design",
-    client: "Fashion Editorial",
-    image: outfitWhiteKurta,
-    aspectRatio: "1/2",
-    tags: ["Apparel Styling", "Editorial Fashion", "Textile Details"],
-    desc: "High-end women's ethnic embroidered attire showcase on mannequin with delicate chikankari embroidery details and warm background lighting.",
+    "id": "creative-19",
+    "file": "19.jpg",
+    "num": 19,
+    "category": "ad_creatives",
+    "categoryLabel": "Ad Creative",
+    "title": "High-Conversion Campaign Ad #19",
+    "client": "Law Prep Tutorial (LPT)",
+    "image": "/sachin_work/19.jpg",
+    "aspectRatio": "4/5",
+    "fullWidth": false,
+    "tags": [
+      "Paid Ads",
+      "Ad Campaign",
+      "EdTech",
+      "Conversion Art"
+    ],
+    "desc": "Promotional ad graphic optimized for paid media campaigns with high-contrast typography and clear CTA."
   },
   {
-    id: "product-5",
-    category: "product_designs",
-    categoryLabel: "Product Design",
-    title: "Sakshi - Taste of Ethnicity",
-    subCategory: "Outfit Design",
-    client: "Sakshi Ethnic",
-    image: outfitGoldSakshi,
-    aspectRatio: "1/2",
-    tags: ["Luxury Ethnic Wear", "Brand Identity", "Studio Lighting"],
-    desc: "Exquisite gold regal ethnic suit design presented with royal seal crest branding 'SAKSHI - Taste of Ethnicity'.",
-  },
-
-  // --- THUMBNAIL DESIGNS ---
-  {
-    id: "thumb-1",
-    category: "thumbnails",
-    categoryLabel: "Thumbnail Design",
-    title: "Kya Hai Vote Chori?",
-    client: "YouTube Creator / Media Channel",
-    image: thumbVoteChori,
-    aspectRatio: "16/9",
-    tags: ["YouTube Thumbnail", "High CTR", "Political News"],
-    desc: "High-CTR political viral thumbnail design featuring high contrast 'KYA HAI VOTE CHORI?' typography, Rahul Gandhi & Modi cutouts, and 40,009 highlighted stats.",
+    "id": "creative-20",
+    "file": "20.jpg",
+    "num": 20,
+    "category": "ad_creatives",
+    "categoryLabel": "Ad Creative",
+    "title": "High-Conversion Campaign Ad #20",
+    "client": "Law Prep Tutorial (LPT)",
+    "image": "/sachin_work/20.jpg",
+    "aspectRatio": "4/5",
+    "fullWidth": false,
+    "tags": [
+      "Paid Ads",
+      "Ad Campaign",
+      "EdTech",
+      "Conversion Art"
+    ],
+    "desc": "Promotional ad graphic optimized for paid media campaigns with high-contrast typography and clear CTA."
   },
   {
-    id: "thumb-2",
-    category: "thumbnails",
-    categoryLabel: "Thumbnail Design",
-    title: "IPMAT Verbal Mastery #22",
-    client: "Law Prep Tutorial",
-    image: thumbVerbalMastery,
-    aspectRatio: "16/9",
-    tags: ["EdTech Thumbnail", "Course Series", "Vector Art"],
-    desc: "Clean educational thumbnail layout for course lecture series featuring Grammar, Synonyms, RC, and Idioms floating icons.",
+    "id": "creative-21",
+    "file": "21.jpg",
+    "num": 21,
+    "category": "social_posts",
+    "categoryLabel": "Social Media Post",
+    "title": "Social Media Feature Post #21",
+    "client": "Law Prep Tutorial / Brand Media",
+    "image": "/sachin_work/21.jpg",
+    "aspectRatio": "4/5",
+    "fullWidth": false,
+    "tags": [
+      "Social Feed",
+      "Brand Post",
+      "Engagement",
+      "Typography"
+    ],
+    "desc": "Engaging social media post design featuring bold typography, student spotlights, and brand graphics."
   },
   {
-    id: "thumb-3",
-    category: "thumbnails",
-    categoryLabel: "Thumbnail Design",
-    title: "IPM Indore 2025 All India Rank 22",
-    client: "Law Prep Tutorial",
-    image: thumbAir22,
-    aspectRatio: "16/9",
-    tags: ["Topper Announcement", "Ranker Graphic", "Gold Badging"],
-    desc: "Celebratory topper announcement thumbnail featuring student photo (Anshi Arora), bold gold rank number 22, and LPT branding.",
+    "id": "creative-22",
+    "file": "22.jpg",
+    "num": 22,
+    "category": "social_posts",
+    "categoryLabel": "Social Media Post",
+    "title": "Social Media Feature Post #22",
+    "client": "Law Prep Tutorial / Brand Media",
+    "image": "/sachin_work/22.jpg",
+    "aspectRatio": "4/5",
+    "fullWidth": false,
+    "tags": [
+      "Social Feed",
+      "Brand Post",
+      "Engagement",
+      "Typography"
+    ],
+    "desc": "Engaging social media post design featuring bold typography, student spotlights, and brand graphics."
   },
   {
-    id: "thumb-4",
-    category: "thumbnails",
-    categoryLabel: "Thumbnail Design",
-    title: "Most Common LRDI Mistakes",
-    client: "Law Prep Tutorial",
-    image: thumbLrdiMistakes,
-    aspectRatio: "16/9",
-    tags: ["Mistake Analysis", "Comparison Layout", "High CTR"],
-    desc: "High-curiosity YouTube thumbnail with split Red Cross vs Green Checkmark comparison boxes and expressive educator photos.",
-  },
-
-  // --- REEL COVERS & SHORTS ---
-  {
-    id: "reel-1",
-    category: "reel_covers",
-    categoryLabel: "Reel Cover",
-    title: "Unknown Yet Beautiful",
-    client: "Law Prep Tutorial / Shorts",
-    image: reelUnknownBeautiful,
-    aspectRatio: "9/16",
-    tags: ["Instagram Reel", "Vertical Cover", "Cinematic Mood"],
-    desc: "Dramatic 9:16 vertical reel thumbnail with vintage monochrome portrait lighting and bold stacked typography.",
+    "id": "creative-23",
+    "file": "23.jpg",
+    "num": 23,
+    "category": "social_posts",
+    "categoryLabel": "Social Media Post",
+    "title": "Social Media Feature Post #23",
+    "client": "Law Prep Tutorial / Brand Media",
+    "image": "/sachin_work/23.jpg",
+    "aspectRatio": "4/5",
+    "fullWidth": false,
+    "tags": [
+      "Social Feed",
+      "Brand Post",
+      "Engagement",
+      "Typography"
+    ],
+    "desc": "Engaging social media post design featuring bold typography, student spotlights, and brand graphics."
   },
   {
-    id: "reel-2",
-    category: "reel_covers",
-    categoryLabel: "Reel Cover",
-    title: "CLAT 2026 - 5 Important Topics",
-    client: "Law Prep Tutorial",
-    image: reelClat5Topics,
-    aspectRatio: "9/16",
-    tags: ["Shorts Thumbnail", "Exam Tips", "3D Callouts"],
-    desc: "High-impact educational reel cover with oversized 3D number '5' and crisp educator cutout.",
+    "id": "creative-24",
+    "file": "24.jpg",
+    "num": 24,
+    "category": "social_posts",
+    "categoryLabel": "Social Media Post",
+    "title": "Social Media Feature Post #24",
+    "client": "Law Prep Tutorial / Brand Media",
+    "image": "/sachin_work/24.jpg",
+    "aspectRatio": "4/5",
+    "fullWidth": false,
+    "tags": [
+      "Social Feed",
+      "Brand Post",
+      "Engagement",
+      "Typography"
+    ],
+    "desc": "Engaging social media post design featuring bold typography, student spotlights, and brand graphics."
   },
   {
-    id: "reel-3",
-    category: "reel_covers",
-    categoryLabel: "Reel Cover",
-    title: "Rajshamani vs Deepfakes",
-    client: "Podcast Shorts",
-    image: reelRajShamani,
-    aspectRatio: "9/16",
-    tags: ["Podcast Cover", "Dark Theme", "Microphone Portrait"],
-    desc: "Dramatic podcast reel cover featuring Raj Shamani vs Deepfakes discussion with studio microphone and high contrast red text.",
+    "id": "creative-25",
+    "file": "25.jpg",
+    "num": 25,
+    "category": "social_posts",
+    "categoryLabel": "Social Media Post",
+    "title": "Social Media Feature Post #25",
+    "client": "Law Prep Tutorial / Brand Media",
+    "image": "/sachin_work/25.jpg",
+    "aspectRatio": "4/5",
+    "fullWidth": false,
+    "tags": [
+      "Social Feed",
+      "Brand Post",
+      "Engagement",
+      "Typography"
+    ],
+    "desc": "Engaging social media post design featuring bold typography, student spotlights, and brand graphics."
   },
   {
-    id: "reel-4",
-    category: "reel_covers",
-    categoryLabel: "Reel Cover",
-    title: "CLAT 2026 Provisional Answer Key Out!",
-    client: "Law Prep Tutorial",
-    image: reelAnswerKeyOut,
-    aspectRatio: "9/16",
-    tags: ["Urgent Alert", "Reel Cover", "High CTR"],
-    desc: "Urgent news announcement vertical reel cover featuring high-visibility yellow & red headline badges and exam paper graphic.",
+    "id": "creative-26",
+    "file": "26.jpg",
+    "num": 26,
+    "category": "social_posts",
+    "categoryLabel": "Social Media Post",
+    "title": "Social Media Feature Post #26",
+    "client": "Law Prep Tutorial / Brand Media",
+    "image": "/sachin_work/26.jpg",
+    "aspectRatio": "4/5",
+    "fullWidth": false,
+    "tags": [
+      "Social Feed",
+      "Brand Post",
+      "Engagement",
+      "Typography"
+    ],
+    "desc": "Engaging social media post design featuring bold typography, student spotlights, and brand graphics."
   },
+  {
+    "id": "creative-27",
+    "file": "27.jpg",
+    "num": 27,
+    "category": "social_posts",
+    "categoryLabel": "Social Media Post",
+    "title": "Social Media Feature Post #27",
+    "client": "Law Prep Tutorial / Brand Media",
+    "image": "/sachin_work/27.jpg",
+    "aspectRatio": "4/5",
+    "fullWidth": false,
+    "tags": [
+      "Social Feed",
+      "Brand Post",
+      "Engagement",
+      "Typography"
+    ],
+    "desc": "Engaging social media post design featuring bold typography, student spotlights, and brand graphics."
+  },
+  {
+    "id": "creative-28",
+    "file": "28.jpg",
+    "num": 28,
+    "category": "social_posts",
+    "categoryLabel": "Social Media Post",
+    "title": "Social Media Feature Post #28",
+    "client": "Law Prep Tutorial / Brand Media",
+    "image": "/sachin_work/28.jpg",
+    "aspectRatio": "4/5",
+    "fullWidth": false,
+    "tags": [
+      "Social Feed",
+      "Brand Post",
+      "Engagement",
+      "Typography"
+    ],
+    "desc": "Engaging social media post design featuring bold typography, student spotlights, and brand graphics."
+  },
+  {
+    "id": "creative-29",
+    "file": "29.jpg",
+    "num": 29,
+    "category": "social_posts",
+    "categoryLabel": "Social Media Post",
+    "title": "Social Media Feature Post #29",
+    "client": "Law Prep Tutorial / Brand Media",
+    "image": "/sachin_work/29.jpg",
+    "aspectRatio": "4/5",
+    "fullWidth": false,
+    "tags": [
+      "Social Feed",
+      "Brand Post",
+      "Engagement",
+      "Typography"
+    ],
+    "desc": "Engaging social media post design featuring bold typography, student spotlights, and brand graphics."
+  },
+  {
+    "id": "creative-30",
+    "file": "30.jpg",
+    "num": 30,
+    "category": "social_posts",
+    "categoryLabel": "Social Media Post",
+    "title": "Social Media Feature Post #30",
+    "client": "Law Prep Tutorial / Brand Media",
+    "image": "/sachin_work/30.jpg",
+    "aspectRatio": "4/5",
+    "fullWidth": false,
+    "tags": [
+      "Social Feed",
+      "Brand Post",
+      "Engagement",
+      "Typography"
+    ],
+    "desc": "Engaging social media post design featuring bold typography, student spotlights, and brand graphics."
+  },
+  {
+    "id": "creative-31",
+    "file": "31.jpg",
+    "num": 31,
+    "category": "social_posts",
+    "categoryLabel": "Social Media Post",
+    "title": "Social Media Feature Post #31",
+    "client": "Law Prep Tutorial / Brand Media",
+    "image": "/sachin_work/31.jpg",
+    "aspectRatio": "4/5",
+    "fullWidth": false,
+    "tags": [
+      "Social Feed",
+      "Brand Post",
+      "Engagement",
+      "Typography"
+    ],
+    "desc": "Engaging social media post design featuring bold typography, student spotlights, and brand graphics."
+  },
+  {
+    "id": "creative-32",
+    "file": "32.jpg",
+    "num": 32,
+    "category": "social_posts",
+    "categoryLabel": "Social Media Post",
+    "title": "Social Media Feature Post #32",
+    "client": "Law Prep Tutorial / Brand Media",
+    "image": "/sachin_work/32.jpg",
+    "aspectRatio": "4/5",
+    "fullWidth": false,
+    "tags": [
+      "Social Feed",
+      "Brand Post",
+      "Engagement",
+      "Typography"
+    ],
+    "desc": "Engaging social media post design featuring bold typography, student spotlights, and brand graphics."
+  },
+  {
+    "id": "creative-33",
+    "file": "33.jpg",
+    "num": 33,
+    "category": "social_posts",
+    "categoryLabel": "Social Media Post",
+    "title": "Social Media Feature Post #33",
+    "client": "Law Prep Tutorial / Brand Media",
+    "image": "/sachin_work/33.jpg",
+    "aspectRatio": "4/5",
+    "fullWidth": false,
+    "tags": [
+      "Social Feed",
+      "Brand Post",
+      "Engagement",
+      "Typography"
+    ],
+    "desc": "Engaging social media post design featuring bold typography, student spotlights, and brand graphics."
+  },
+  {
+    "id": "creative-34",
+    "file": "34.jpg",
+    "num": 34,
+    "category": "social_posts",
+    "categoryLabel": "Social Media Post",
+    "title": "Social Media Feature Post #34",
+    "client": "Law Prep Tutorial / Brand Media",
+    "image": "/sachin_work/34.jpg",
+    "aspectRatio": "4/5",
+    "fullWidth": false,
+    "tags": [
+      "Social Feed",
+      "Brand Post",
+      "Engagement",
+      "Typography"
+    ],
+    "desc": "Engaging social media post design featuring bold typography, student spotlights, and brand graphics."
+  },
+  {
+    "id": "creative-35",
+    "file": "35.jpg",
+    "num": 35,
+    "category": "social_posts",
+    "categoryLabel": "Social Media Post",
+    "title": "Social Media Feature Post #35",
+    "client": "Law Prep Tutorial / Brand Media",
+    "image": "/sachin_work/35.jpg",
+    "aspectRatio": "4/5",
+    "fullWidth": false,
+    "tags": [
+      "Social Feed",
+      "Brand Post",
+      "Engagement",
+      "Typography"
+    ],
+    "desc": "Engaging social media post design featuring bold typography, student spotlights, and brand graphics."
+  },
+  {
+    "id": "creative-36",
+    "file": "36.jpg",
+    "num": 36,
+    "category": "social_posts",
+    "categoryLabel": "Social Media Post",
+    "title": "Social Media Feature Post #36",
+    "client": "Law Prep Tutorial / Brand Media",
+    "image": "/sachin_work/36.jpg",
+    "aspectRatio": "4/5",
+    "fullWidth": false,
+    "tags": [
+      "Social Feed",
+      "Brand Post",
+      "Engagement",
+      "Typography"
+    ],
+    "desc": "Engaging social media post design featuring bold typography, student spotlights, and brand graphics."
+  },
+  {
+    "id": "creative-37",
+    "file": "37.jpg",
+    "num": 37,
+    "category": "social_posts",
+    "categoryLabel": "Social Media Post",
+    "title": "Social Media Feature Post #37",
+    "client": "Law Prep Tutorial / Brand Media",
+    "image": "/sachin_work/37.jpg",
+    "aspectRatio": "4/5",
+    "fullWidth": false,
+    "tags": [
+      "Social Feed",
+      "Brand Post",
+      "Engagement",
+      "Typography"
+    ],
+    "desc": "Engaging social media post design featuring bold typography, student spotlights, and brand graphics."
+  },
+  {
+    "id": "creative-38",
+    "file": "38.jpg",
+    "num": 38,
+    "category": "social_posts",
+    "categoryLabel": "Social Media Post",
+    "title": "Social Media Feature Post #38",
+    "client": "Law Prep Tutorial / Brand Media",
+    "image": "/sachin_work/38.jpg",
+    "aspectRatio": "4/5",
+    "fullWidth": false,
+    "tags": [
+      "Social Feed",
+      "Brand Post",
+      "Engagement",
+      "Typography"
+    ],
+    "desc": "Engaging social media post design featuring bold typography, student spotlights, and brand graphics."
+  },
+  {
+    "id": "creative-39",
+    "file": "39.jpg",
+    "num": 39,
+    "category": "product_designs",
+    "categoryLabel": "Product & Furniture Design",
+    "title": "3D Product & Furniture Render #39",
+    "client": "Bhavya Living / Premium Brand",
+    "image": "/sachin_work/39.jpg",
+    "aspectRatio": "4/5",
+    "fullWidth": false,
+    "tags": [
+      "3D Render",
+      "Furniture Modeling",
+      "Product Art",
+      "CAD Studio"
+    ],
+    "desc": "Photorealistic 3D product render and furniture concept art showcasing materials, studio lighting, and architectural details."
+  },
+  {
+    "id": "creative-40",
+    "file": "40.jpg",
+    "num": 40,
+    "category": "product_designs",
+    "categoryLabel": "Product & Furniture Design",
+    "title": "3D Product & Furniture Render #40",
+    "client": "Bhavya Living / Premium Brand",
+    "image": "/sachin_work/40.jpg",
+    "aspectRatio": "4/5",
+    "fullWidth": false,
+    "tags": [
+      "3D Render",
+      "Furniture Modeling",
+      "Product Art",
+      "CAD Studio"
+    ],
+    "desc": "Photorealistic 3D product render and furniture concept art showcasing materials, studio lighting, and architectural details."
+  },
+  {
+    "id": "creative-41",
+    "file": "41.jpg",
+    "num": 41,
+    "category": "product_designs",
+    "categoryLabel": "Product & Furniture Design",
+    "title": "3D Product & Furniture Render #41",
+    "client": "Bhavya Living / Premium Brand",
+    "image": "/sachin_work/41.jpg",
+    "aspectRatio": "4/5",
+    "fullWidth": false,
+    "tags": [
+      "3D Render",
+      "Furniture Modeling",
+      "Product Art",
+      "CAD Studio"
+    ],
+    "desc": "Photorealistic 3D product render and furniture concept art showcasing materials, studio lighting, and architectural details."
+  },
+  {
+    "id": "creative-42",
+    "file": "42.jpg",
+    "num": 42,
+    "category": "product_designs",
+    "categoryLabel": "Product & Furniture Design",
+    "title": "3D Product & Furniture Render #42",
+    "client": "Bhavya Living / Premium Brand",
+    "image": "/sachin_work/42.jpg",
+    "aspectRatio": "4/5",
+    "fullWidth": false,
+    "tags": [
+      "3D Render",
+      "Furniture Modeling",
+      "Product Art",
+      "CAD Studio"
+    ],
+    "desc": "Photorealistic 3D product render and furniture concept art showcasing materials, studio lighting, and architectural details."
+  },
+  {
+    "id": "creative-43",
+    "file": "43.jpg",
+    "num": 43,
+    "category": "product_designs",
+    "categoryLabel": "Product & Furniture Design",
+    "title": "3D Product & Furniture Render #43",
+    "client": "Bhavya Living / Premium Brand",
+    "image": "/sachin_work/43.jpg",
+    "aspectRatio": "4/5",
+    "fullWidth": false,
+    "tags": [
+      "3D Render",
+      "Furniture Modeling",
+      "Product Art",
+      "CAD Studio"
+    ],
+    "desc": "Photorealistic 3D product render and furniture concept art showcasing materials, studio lighting, and architectural details."
+  },
+  {
+    "id": "creative-44",
+    "file": "44.jpg",
+    "num": 44,
+    "category": "product_designs",
+    "categoryLabel": "Product & Furniture Design",
+    "title": "3D Product & Furniture Render #44",
+    "client": "Bhavya Living / Premium Brand",
+    "image": "/sachin_work/44.jpg",
+    "aspectRatio": "4/5",
+    "fullWidth": false,
+    "tags": [
+      "3D Render",
+      "Furniture Modeling",
+      "Product Art",
+      "CAD Studio"
+    ],
+    "desc": "Photorealistic 3D product render and furniture concept art showcasing materials, studio lighting, and architectural details."
+  },
+  {
+    "id": "creative-45",
+    "file": "45.jpg",
+    "num": 45,
+    "category": "product_designs",
+    "categoryLabel": "Product & Furniture Design",
+    "title": "3D Product & Furniture Render #45",
+    "client": "Bhavya Living / Premium Brand",
+    "image": "/sachin_work/45.jpg",
+    "aspectRatio": "4/5",
+    "fullWidth": false,
+    "tags": [
+      "3D Render",
+      "Furniture Modeling",
+      "Product Art",
+      "CAD Studio"
+    ],
+    "desc": "Photorealistic 3D product render and furniture concept art showcasing materials, studio lighting, and architectural details."
+  },
+  {
+    "id": "creative-46",
+    "file": "46.jpg",
+    "num": 46,
+    "category": "product_designs",
+    "categoryLabel": "Product & Furniture Design",
+    "title": "3D Product & Furniture Render #46",
+    "client": "Bhavya Living / Premium Brand",
+    "image": "/sachin_work/46.jpg",
+    "aspectRatio": "4/5",
+    "fullWidth": false,
+    "tags": [
+      "3D Render",
+      "Furniture Modeling",
+      "Product Art",
+      "CAD Studio"
+    ],
+    "desc": "Photorealistic 3D product render and furniture concept art showcasing materials, studio lighting, and architectural details."
+  },
+  {
+    "id": "creative-47",
+    "file": "47.jpg",
+    "num": 47,
+    "category": "product_designs",
+    "categoryLabel": "Product & Furniture Design",
+    "title": "3D Product & Furniture Render #47",
+    "client": "Bhavya Living / Premium Brand",
+    "image": "/sachin_work/47.jpg",
+    "aspectRatio": "4/5",
+    "fullWidth": false,
+    "tags": [
+      "3D Render",
+      "Furniture Modeling",
+      "Product Art",
+      "CAD Studio"
+    ],
+    "desc": "Photorealistic 3D product render and furniture concept art showcasing materials, studio lighting, and architectural details."
+  },
+  {
+    "id": "creative-48",
+    "file": "48.jpg",
+    "num": 48,
+    "category": "product_designs",
+    "categoryLabel": "Product & Furniture Design",
+    "title": "3D Product & Furniture Render #48",
+    "client": "Bhavya Living / Premium Brand",
+    "image": "/sachin_work/48.jpg",
+    "aspectRatio": "4/5",
+    "fullWidth": false,
+    "tags": [
+      "3D Render",
+      "Furniture Modeling",
+      "Product Art",
+      "CAD Studio"
+    ],
+    "desc": "Photorealistic 3D product render and furniture concept art showcasing materials, studio lighting, and architectural details."
+  },
+  {
+    "id": "creative-49",
+    "file": "49.jpg",
+    "num": 49,
+    "category": "product_designs",
+    "categoryLabel": "Product & Furniture Design",
+    "title": "3D Product & Furniture Render #49",
+    "client": "Bhavya Living / Premium Brand",
+    "image": "/sachin_work/49.jpg",
+    "aspectRatio": "4/5",
+    "fullWidth": false,
+    "tags": [
+      "3D Render",
+      "Furniture Modeling",
+      "Product Art",
+      "CAD Studio"
+    ],
+    "desc": "Photorealistic 3D product render and furniture concept art showcasing materials, studio lighting, and architectural details."
+  },
+  {
+    "id": "creative-50",
+    "file": "50.jpg",
+    "num": 50,
+    "category": "product_designs",
+    "categoryLabel": "Product & Furniture Design",
+    "title": "3D Product & Furniture Render #50",
+    "client": "Bhavya Living / Premium Brand",
+    "image": "/sachin_work/50.jpg",
+    "aspectRatio": "4/5",
+    "fullWidth": false,
+    "tags": [
+      "3D Render",
+      "Furniture Modeling",
+      "Product Art",
+      "CAD Studio"
+    ],
+    "desc": "Photorealistic 3D product render and furniture concept art showcasing materials, studio lighting, and architectural details."
+  },
+  {
+    "id": "creative-51",
+    "file": "51.jpg",
+    "num": 51,
+    "category": "product_designs",
+    "categoryLabel": "Product & Furniture Design",
+    "title": "3D Product & Furniture Render #51",
+    "client": "Bhavya Living / Premium Brand",
+    "image": "/sachin_work/51.jpg",
+    "aspectRatio": "4/5",
+    "fullWidth": false,
+    "tags": [
+      "3D Render",
+      "Furniture Modeling",
+      "Product Art",
+      "CAD Studio"
+    ],
+    "desc": "Photorealistic 3D product render and furniture concept art showcasing materials, studio lighting, and architectural details."
+  },
+  {
+    "id": "creative-52",
+    "file": "52.jpg",
+    "num": 52,
+    "category": "product_designs",
+    "categoryLabel": "Product & Furniture Design",
+    "title": "3D Product & Furniture Render #52",
+    "client": "Bhavya Living / Premium Brand",
+    "image": "/sachin_work/52.jpg",
+    "aspectRatio": "4/5",
+    "fullWidth": false,
+    "tags": [
+      "3D Render",
+      "Furniture Modeling",
+      "Product Art",
+      "CAD Studio"
+    ],
+    "desc": "Photorealistic 3D product render and furniture concept art showcasing materials, studio lighting, and architectural details."
+  },
+  {
+    "id": "creative-53",
+    "file": "53.jpg",
+    "num": 53,
+    "category": "product_designs",
+    "categoryLabel": "Product & Furniture Design",
+    "title": "3D Product & Furniture Render #53",
+    "client": "Bhavya Living / Premium Brand",
+    "image": "/sachin_work/53.jpg",
+    "aspectRatio": "4/5",
+    "fullWidth": false,
+    "tags": [
+      "3D Render",
+      "Furniture Modeling",
+      "Product Art",
+      "CAD Studio"
+    ],
+    "desc": "Photorealistic 3D product render and furniture concept art showcasing materials, studio lighting, and architectural details."
+  },
+  {
+    "id": "creative-54",
+    "file": "54.jpg",
+    "num": 54,
+    "category": "product_designs",
+    "categoryLabel": "Product & Furniture Design",
+    "title": "3D Product & Furniture Render #54",
+    "client": "Bhavya Living / Premium Brand",
+    "image": "/sachin_work/54.jpg",
+    "aspectRatio": "4/5",
+    "fullWidth": false,
+    "tags": [
+      "3D Render",
+      "Furniture Modeling",
+      "Product Art",
+      "CAD Studio"
+    ],
+    "desc": "Photorealistic 3D product render and furniture concept art showcasing materials, studio lighting, and architectural details."
+  },
+  {
+    "id": "creative-55",
+    "file": "55.jpg",
+    "num": 55,
+    "category": "product_designs",
+    "categoryLabel": "Product & Furniture Design",
+    "title": "3D Product & Furniture Render #55",
+    "client": "Bhavya Living / Premium Brand",
+    "image": "/sachin_work/55.jpg",
+    "aspectRatio": "4/5",
+    "fullWidth": false,
+    "tags": [
+      "3D Render",
+      "Furniture Modeling",
+      "Product Art",
+      "CAD Studio"
+    ],
+    "desc": "Photorealistic 3D product render and furniture concept art showcasing materials, studio lighting, and architectural details."
+  },
+  {
+    "id": "creative-56",
+    "file": "56.jpg",
+    "num": 56,
+    "category": "product_designs",
+    "categoryLabel": "Product & Furniture Design",
+    "title": "3D Product & Furniture Render #56",
+    "client": "Bhavya Living / Premium Brand",
+    "image": "/sachin_work/56.jpg",
+    "aspectRatio": "4/5",
+    "fullWidth": false,
+    "tags": [
+      "3D Render",
+      "Furniture Modeling",
+      "Product Art",
+      "CAD Studio"
+    ],
+    "desc": "Photorealistic 3D product render and furniture concept art showcasing materials, studio lighting, and architectural details."
+  },
+  {
+    "id": "creative-57",
+    "file": "57.jpg",
+    "num": 57,
+    "category": "product_designs",
+    "categoryLabel": "Product & Furniture Design",
+    "title": "3D Product & Furniture Render #57",
+    "client": "Bhavya Living / Premium Brand",
+    "image": "/sachin_work/57.jpg",
+    "aspectRatio": "4/5",
+    "fullWidth": false,
+    "tags": [
+      "3D Render",
+      "Furniture Modeling",
+      "Product Art",
+      "CAD Studio"
+    ],
+    "desc": "Photorealistic 3D product render and furniture concept art showcasing materials, studio lighting, and architectural details."
+  },
+  {
+    "id": "creative-58",
+    "file": "58.jpg",
+    "num": 58,
+    "category": "product_designs",
+    "categoryLabel": "Product & Furniture Design",
+    "title": "3D Product & Furniture Render #58",
+    "client": "Bhavya Living / Premium Brand",
+    "image": "/sachin_work/58.jpg",
+    "aspectRatio": "4/5",
+    "fullWidth": false,
+    "tags": [
+      "3D Render",
+      "Furniture Modeling",
+      "Product Art",
+      "CAD Studio"
+    ],
+    "desc": "Photorealistic 3D product render and furniture concept art showcasing materials, studio lighting, and architectural details."
+  },
+  {
+    "id": "creative-59",
+    "file": "59.jpg",
+    "num": 59,
+    "category": "reel_covers",
+    "categoryLabel": "Reel Cover",
+    "title": "Reel Cover & Shorts #59",
+    "client": "Law Prep Tutorial",
+    "image": "/sachin_work/59.jpg",
+    "aspectRatio": "9/16",
+    "fullWidth": false,
+    "tags": [
+      "Instagram Reel",
+      "Vertical 9:16",
+      "High CTR",
+      "Shorts"
+    ],
+    "desc": "9:16 vertical cover artwork engineered for high engagement on Instagram Reels & YouTube Shorts."
+  },
+  {
+    "id": "creative-61",
+    "file": "61.jpg",
+    "num": 61,
+    "category": "thumbnails",
+    "categoryLabel": "Thumbnail & Video Art",
+    "title": "High-CTR Video Thumbnail #61",
+    "client": "YouTube Media / LPT Channel",
+    "image": "/sachin_work/61.jpg",
+    "aspectRatio": "4/5",
+    "fullWidth": false,
+    "tags": [
+      "YouTube Thumbnail",
+      "High CTR",
+      "Video Cover",
+      "Viral Art"
+    ],
+    "desc": "High-CTR video thumbnail design crafted to maximize click rates with curiosity hooks and crisp cutouts."
+  },
+  {
+    "id": "creative-62",
+    "file": "62.jpg",
+    "num": 62,
+    "category": "thumbnails",
+    "categoryLabel": "Thumbnail & Video Art",
+    "title": "High-CTR Video Thumbnail #62",
+    "client": "YouTube Media / LPT Channel",
+    "image": "/sachin_work/62.jpg",
+    "aspectRatio": "4/5",
+    "fullWidth": false,
+    "tags": [
+      "YouTube Thumbnail",
+      "High CTR",
+      "Video Cover",
+      "Viral Art"
+    ],
+    "desc": "High-CTR video thumbnail design crafted to maximize click rates with curiosity hooks and crisp cutouts."
+  },
+  {
+    "id": "creative-63",
+    "file": "63.jpg",
+    "num": 63,
+    "category": "thumbnails",
+    "categoryLabel": "Thumbnail & Video Art",
+    "title": "High-CTR Video Thumbnail #63",
+    "client": "YouTube Media / LPT Channel",
+    "image": "/sachin_work/63.jpg",
+    "aspectRatio": "1/1",
+    "fullWidth": false,
+    "tags": [
+      "YouTube Thumbnail",
+      "High CTR",
+      "Video Cover",
+      "Viral Art"
+    ],
+    "desc": "High-CTR video thumbnail design crafted to maximize click rates with curiosity hooks and crisp cutouts."
+  },
+  {
+    "id": "creative-64",
+    "file": "64.jpg",
+    "num": 64,
+    "category": "thumbnails",
+    "categoryLabel": "Thumbnail & Video Art",
+    "title": "High-CTR Video Thumbnail #64",
+    "client": "YouTube Media / LPT Channel",
+    "image": "/sachin_work/64.jpg",
+    "aspectRatio": "4/5",
+    "fullWidth": false,
+    "tags": [
+      "YouTube Thumbnail",
+      "High CTR",
+      "Video Cover",
+      "Viral Art"
+    ],
+    "desc": "High-CTR video thumbnail design crafted to maximize click rates with curiosity hooks and crisp cutouts."
+  },
+  {
+    "id": "creative-65",
+    "file": "65.jpg",
+    "num": 65,
+    "category": "thumbnails",
+    "categoryLabel": "Thumbnail & Video Art",
+    "title": "High-CTR Video Thumbnail #65",
+    "client": "YouTube Media / LPT Channel",
+    "image": "/sachin_work/65.jpg",
+    "aspectRatio": "4/5",
+    "fullWidth": false,
+    "tags": [
+      "YouTube Thumbnail",
+      "High CTR",
+      "Video Cover",
+      "Viral Art"
+    ],
+    "desc": "High-CTR video thumbnail design crafted to maximize click rates with curiosity hooks and crisp cutouts."
+  },
+  {
+    "id": "creative-66",
+    "file": "66.jpg",
+    "num": 66,
+    "category": "thumbnails",
+    "categoryLabel": "Thumbnail & Video Art",
+    "title": "High-CTR Video Thumbnail #66",
+    "client": "YouTube Media / LPT Channel",
+    "image": "/sachin_work/66.jpg",
+    "aspectRatio": "4/5",
+    "fullWidth": false,
+    "tags": [
+      "YouTube Thumbnail",
+      "High CTR",
+      "Video Cover",
+      "Viral Art"
+    ],
+    "desc": "High-CTR video thumbnail design crafted to maximize click rates with curiosity hooks and crisp cutouts."
+  },
+  {
+    "id": "creative-67",
+    "file": "67.jpg",
+    "num": 67,
+    "category": "thumbnails",
+    "categoryLabel": "Thumbnail & Video Art",
+    "title": "High-CTR Video Thumbnail #67",
+    "client": "YouTube Media / LPT Channel",
+    "image": "/sachin_work/67.jpg",
+    "aspectRatio": "4/5",
+    "fullWidth": false,
+    "tags": [
+      "YouTube Thumbnail",
+      "High CTR",
+      "Video Cover",
+      "Viral Art"
+    ],
+    "desc": "High-CTR video thumbnail design crafted to maximize click rates with curiosity hooks and crisp cutouts."
+  },
+  {
+    "id": "creative-68",
+    "file": "68.jpg",
+    "num": 68,
+    "category": "thumbnails",
+    "categoryLabel": "Thumbnail & Video Art",
+    "title": "High-CTR Video Thumbnail #68",
+    "client": "YouTube Media / LPT Channel",
+    "image": "/sachin_work/68.jpg",
+    "aspectRatio": "4/5",
+    "fullWidth": false,
+    "tags": [
+      "YouTube Thumbnail",
+      "High CTR",
+      "Video Cover",
+      "Viral Art"
+    ],
+    "desc": "High-CTR video thumbnail design crafted to maximize click rates with curiosity hooks and crisp cutouts."
+  },
+  {
+    "id": "creative-69",
+    "file": "69.jpg",
+    "num": 69,
+    "category": "thumbnails",
+    "categoryLabel": "Thumbnail & Video Art",
+    "title": "High-CTR Video Thumbnail #69",
+    "client": "YouTube Media / LPT Channel",
+    "image": "/sachin_work/69.jpg",
+    "aspectRatio": "4/5",
+    "fullWidth": false,
+    "tags": [
+      "YouTube Thumbnail",
+      "High CTR",
+      "Video Cover",
+      "Viral Art"
+    ],
+    "desc": "High-CTR video thumbnail design crafted to maximize click rates with curiosity hooks and crisp cutouts."
+  },
+  {
+    "id": "creative-70",
+    "file": "70.jpg",
+    "num": 70,
+    "category": "thumbnails",
+    "categoryLabel": "Thumbnail & Video Art",
+    "title": "High-CTR Video Thumbnail #70",
+    "client": "YouTube Media / LPT Channel",
+    "image": "/sachin_work/70.jpg",
+    "aspectRatio": "4/5",
+    "fullWidth": false,
+    "tags": [
+      "YouTube Thumbnail",
+      "High CTR",
+      "Video Cover",
+      "Viral Art"
+    ],
+    "desc": "High-CTR video thumbnail design crafted to maximize click rates with curiosity hooks and crisp cutouts."
+  },
+  {
+    "id": "creative-71",
+    "file": "71.jpg",
+    "num": 71,
+    "category": "thumbnails",
+    "categoryLabel": "Thumbnail & Video Art",
+    "title": "High-CTR Video Thumbnail #71",
+    "client": "YouTube Media / LPT Channel",
+    "image": "/sachin_work/71.jpg",
+    "aspectRatio": "4/5",
+    "fullWidth": false,
+    "tags": [
+      "YouTube Thumbnail",
+      "High CTR",
+      "Video Cover",
+      "Viral Art"
+    ],
+    "desc": "High-CTR video thumbnail design crafted to maximize click rates with curiosity hooks and crisp cutouts."
+  },
+  {
+    "id": "creative-72",
+    "file": "72.jpg",
+    "num": 72,
+    "category": "thumbnails",
+    "categoryLabel": "Thumbnail & Video Art",
+    "title": "High-CTR Video Thumbnail #72",
+    "client": "YouTube Media / LPT Channel",
+    "image": "/sachin_work/72.jpg",
+    "aspectRatio": "4/5",
+    "fullWidth": false,
+    "tags": [
+      "YouTube Thumbnail",
+      "High CTR",
+      "Video Cover",
+      "Viral Art"
+    ],
+    "desc": "High-CTR video thumbnail design crafted to maximize click rates with curiosity hooks and crisp cutouts."
+  },
+  {
+    "id": "creative-73",
+    "file": "73.jpg",
+    "num": 73,
+    "category": "thumbnails",
+    "categoryLabel": "Thumbnail & Video Art",
+    "title": "High-CTR Video Thumbnail #73",
+    "client": "YouTube Media / LPT Channel",
+    "image": "/sachin_work/73.jpg",
+    "aspectRatio": "4/5",
+    "fullWidth": false,
+    "tags": [
+      "YouTube Thumbnail",
+      "High CTR",
+      "Video Cover",
+      "Viral Art"
+    ],
+    "desc": "High-CTR video thumbnail design crafted to maximize click rates with curiosity hooks and crisp cutouts."
+  },
+  {
+    "id": "creative-74",
+    "file": "74.jpg",
+    "num": 74,
+    "category": "thumbnails",
+    "categoryLabel": "Thumbnail & Video Art",
+    "title": "High-CTR Video Thumbnail #74",
+    "client": "YouTube Media / LPT Channel",
+    "image": "/sachin_work/74.jpg",
+    "aspectRatio": "4/5",
+    "fullWidth": false,
+    "tags": [
+      "YouTube Thumbnail",
+      "High CTR",
+      "Video Cover",
+      "Viral Art"
+    ],
+    "desc": "High-CTR video thumbnail design crafted to maximize click rates with curiosity hooks and crisp cutouts."
+  },
+  {
+    "id": "creative-75",
+    "file": "75.jpg",
+    "num": 75,
+    "category": "social_posts",
+    "categoryLabel": "Infographic Banner",
+    "title": "Wide Campaign Banner #75",
+    "client": "Law Prep Tutorial",
+    "image": "/sachin_work/75.jpg",
+    "aspectRatio": "16/7",
+    "fullWidth": true,
+    "tags": [
+      "Infographic",
+      "Wide Banner",
+      "Process Map",
+      "Editorial"
+    ],
+    "desc": "Panoramic banner layout explaining multi-step processes, announcements, and visual breakdowns."
+  },
+  {
+    "id": "creative-76",
+    "file": "76.jpg",
+    "num": 76,
+    "category": "social_posts",
+    "categoryLabel": "Infographic Banner",
+    "title": "Wide Campaign Banner #76",
+    "client": "Law Prep Tutorial",
+    "image": "/sachin_work/76.jpg",
+    "aspectRatio": "16/7",
+    "fullWidth": true,
+    "tags": [
+      "Infographic",
+      "Wide Banner",
+      "Process Map",
+      "Editorial"
+    ],
+    "desc": "Panoramic banner layout explaining multi-step processes, announcements, and visual breakdowns."
+  },
+  {
+    "id": "creative-77",
+    "file": "77.jpg",
+    "num": 77,
+    "category": "social_posts",
+    "categoryLabel": "Infographic Banner",
+    "title": "Wide Campaign Banner #77",
+    "client": "Law Prep Tutorial",
+    "image": "/sachin_work/77.jpg",
+    "aspectRatio": "16/7",
+    "fullWidth": true,
+    "tags": [
+      "Infographic",
+      "Wide Banner",
+      "Process Map",
+      "Editorial"
+    ],
+    "desc": "Panoramic banner layout explaining multi-step processes, announcements, and visual breakdowns."
+  },
+  {
+    "id": "creative-78",
+    "file": "78.png",
+    "num": 78,
+    "category": "reel_covers",
+    "categoryLabel": "Reel Cover",
+    "title": "Reel Cover & Shorts #78",
+    "client": "Law Prep Tutorial",
+    "image": "/sachin_work/78.png",
+    "aspectRatio": "9/16",
+    "fullWidth": false,
+    "tags": [
+      "Instagram Reel",
+      "Vertical 9:16",
+      "High CTR",
+      "Shorts"
+    ],
+    "desc": "9:16 vertical cover artwork engineered for high engagement on Instagram Reels & YouTube Shorts."
+  },
+  {
+    "id": "creative-79",
+    "file": "79.png",
+    "num": 79,
+    "category": "ad_creatives",
+    "categoryLabel": "Campaign Graphic",
+    "title": "Premium Brand Creative #79",
+    "client": "Brand Visuals",
+    "image": "/sachin_work/79.png",
+    "aspectRatio": "4/5",
+    "fullWidth": false,
+    "tags": [
+      "Brand Identity",
+      "Creative Art",
+      "Campaign"
+    ],
+    "desc": "Custom brand graphic featuring high quality layout aesthetics and visual storytelling."
+  },
+  {
+    "id": "creative-80",
+    "file": "80.png",
+    "num": 80,
+    "category": "ad_creatives",
+    "categoryLabel": "Campaign Graphic",
+    "title": "Premium Brand Creative #80",
+    "client": "Brand Visuals",
+    "image": "/sachin_work/80.png",
+    "aspectRatio": "4/5",
+    "fullWidth": false,
+    "tags": [
+      "Brand Identity",
+      "Creative Art",
+      "Campaign"
+    ],
+    "desc": "Custom brand graphic featuring high quality layout aesthetics and visual storytelling."
+  },
+  {
+    "id": "creative-81",
+    "file": "81.jpg",
+    "num": 81,
+    "category": "ad_creatives",
+    "categoryLabel": "Campaign Graphic",
+    "title": "Premium Brand Creative #81",
+    "client": "Brand Visuals",
+    "image": "/sachin_work/81.jpg",
+    "aspectRatio": "4/5",
+    "fullWidth": false,
+    "tags": [
+      "Brand Identity",
+      "Creative Art",
+      "Campaign"
+    ],
+    "desc": "Custom brand graphic featuring high quality layout aesthetics and visual storytelling."
+  },
+  {
+    "id": "creative-82",
+    "file": "82.jpg",
+    "num": 82,
+    "category": "ad_creatives",
+    "categoryLabel": "Campaign Graphic",
+    "title": "Premium Brand Creative #82",
+    "client": "Brand Visuals",
+    "image": "/sachin_work/82.jpg",
+    "aspectRatio": "4/5",
+    "fullWidth": false,
+    "tags": [
+      "Brand Identity",
+      "Creative Art",
+      "Campaign"
+    ],
+    "desc": "Custom brand graphic featuring high quality layout aesthetics and visual storytelling."
+  },
+  {
+    "id": "creative-83",
+    "file": "83.jpg",
+    "num": 83,
+    "category": "ad_creatives",
+    "categoryLabel": "Campaign Graphic",
+    "title": "Premium Brand Creative #83",
+    "client": "Brand Visuals",
+    "image": "/sachin_work/83.jpg",
+    "aspectRatio": "4/5",
+    "fullWidth": false,
+    "tags": [
+      "Brand Identity",
+      "Creative Art",
+      "Campaign"
+    ],
+    "desc": "Custom brand graphic featuring high quality layout aesthetics and visual storytelling."
+  },
+  {
+    "id": "creative-84",
+    "file": "84.jpg",
+    "num": 84,
+    "category": "ad_creatives",
+    "categoryLabel": "Campaign Graphic",
+    "title": "Premium Brand Creative #84",
+    "client": "Brand Visuals",
+    "image": "/sachin_work/84.jpg",
+    "aspectRatio": "4/5",
+    "fullWidth": false,
+    "tags": [
+      "Brand Identity",
+      "Creative Art",
+      "Campaign"
+    ],
+    "desc": "Custom brand graphic featuring high quality layout aesthetics and visual storytelling."
+  },
+  {
+    "id": "creative-85",
+    "file": "85.jpg",
+    "num": 85,
+    "category": "ad_creatives",
+    "categoryLabel": "Campaign Graphic",
+    "title": "Premium Brand Creative #85",
+    "client": "Brand Visuals",
+    "image": "/sachin_work/85.jpg",
+    "aspectRatio": "4/5",
+    "fullWidth": false,
+    "tags": [
+      "Brand Identity",
+      "Creative Art",
+      "Campaign"
+    ],
+    "desc": "Custom brand graphic featuring high quality layout aesthetics and visual storytelling."
+  },
+  {
+    "id": "creative-86",
+    "file": "86.png",
+    "num": 86,
+    "category": "ad_creatives",
+    "categoryLabel": "Campaign Graphic",
+    "title": "Premium Brand Creative #86",
+    "client": "Brand Visuals",
+    "image": "/sachin_work/86.png",
+    "aspectRatio": "4/5",
+    "fullWidth": false,
+    "tags": [
+      "Brand Identity",
+      "Creative Art",
+      "Campaign"
+    ],
+    "desc": "Custom brand graphic featuring high quality layout aesthetics and visual storytelling."
+  }
 ];
